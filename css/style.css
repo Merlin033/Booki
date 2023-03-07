@@ -5,42 +5,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1400px;
 }
 
 body {
-  height: 100vh;
   font-family: "Raleway", sans-serif;
-  margin: 0 3.125em 3.125em 3.125em;
-  transition: 0.3s;
+  max-width: 1440px;
+  margin: auto;
 }
+
 header {
-  max-width: 1400px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 nav > ul {
   display: flex;
+  column-gap: 69px;
 }
-nav > ul > li {
-  padding: 3.7em 1.5em 3.7em 1.5em;
-  font-size: 1em;
+nav > ul > a > li {
+  padding-top: 14px;
+  font-size: 1rem;
+  border-top: solid 0.15em rgba(0, 0, 0, 0);
 }
-nav > ul > li:hover {
+nav > ul > a > li:hover {
   color: #0065fc;
   border-top: solid 0.15em #0065fc;
+  transition: 0.2s;
 }
 a {
   font-size: 0.875em;
   color: inherit;
   text-decoration: none;
 }
+button:hover {
+  cursor: pointer;
+}
 #booki {
   height: 19px;
   width: 61.09px;
-  margin: 3.125em 0 4em 0;
+  margin: 30px 0 64px 0;
 }
 h1 {
   font-size: 1.375em;
@@ -104,21 +107,19 @@ p {
   display: flex;
 
   justify-content: flex-start;
-  flex-wrap: wrap;
   align-items: baseline;
 }
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
-  column-gap: 2.5em;
+  column-gap: 1rem;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 .filter-button {
   display: flex;
   align-items: center;
-  padding: 0.8em 1.2em;
+  padding: 0.8em 1em;
   border: 1px solid #d9d9d9;
   border-radius: 25px;
   margin-bottom: 1em;
@@ -131,8 +132,8 @@ p {
   transition: 0.3s;
 }
 .filter-button-icons {
-  margin-right: 0.7em;
-  font-size: 1.3em;
+  margin-right: 0.4em;
+  font-size: 1.2em;
   color: #0065fc;
 }
 .info-container {
@@ -164,15 +165,16 @@ p {
 /* LODGING SECTION */
 
 .lodging {
-  flex: 2.2;
+  flex: 2.1;
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
   border-radius: 20px;
-  padding: 2.5em;
+  padding: 30px 0 30px 0;
 }
 .lodging > h1 {
   margin-bottom: 1em;
+  padding-left: 2.5%;
 }
 .lodging > a {
   margin-top: 1em;
@@ -180,36 +182,38 @@ p {
 .lodging-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  row-gap: 1.5em;
+  align-items: flex-start;
 }
 .lodging-card {
   background-color: white;
-  max-width: 15em;
-  max-height: 199px;
+  width: 30%;
+  height: 207.25px;
   border-radius: 20px;
-  padding-bottom: 15px;
-  margin-bottom: 1.5em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  padding: 0 0 10px 15px;
+}
 .container > p {
-  font-size: 0.875em;
-  margin-left: 16px;
-  margin-bottom: 5px;
+  line-height: 1rem;
 }
-.container > h3 {
-  margin-left: 16px;
-  margin-bottom: 5px;
+.rating {
+  line-height: 1rem;
 }
+
 .lodging-card > img {
   border: 5px solid #ffffff;
   border-radius: 20px 20px 0px 0px;
   width: 100%;
-  height: 66%;
+  height: 58%;
   object-fit: cover;
 }
-.rating {
-  margin-left: 16px;
-}
+
 .star {
   display: inline-block;
   font-size: 0.8em;
@@ -221,6 +225,12 @@ p {
   color: #f2f2f2;
 }
 
+#view-more {
+  font-size: 1.125em;
+  font-weight: 700;
+  padding-left: 2.5%;
+}
+
 /* MOST POPULAR SECTION */
 
 .most-popular {
@@ -228,8 +238,8 @@ p {
   flex-direction: column;
   background-color: #f2f2f2;
   border-radius: 20px;
-  padding: 2.5em;
-  flex: 0.9;
+  padding: 30px;
+  flex: 1;
 }
 .title-most-popular {
   display: flex;
@@ -241,7 +251,7 @@ p {
   display: flex;
   column-gap: 10px;
   background-color: white;
-  max-width: 20em;
+  width: 100%;
   height: 144px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -251,19 +261,20 @@ p {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: 2em;
+  row-gap: 10px;
 }
 .popular-card > img {
   border: 5px solid #ffffff;
   border-radius: 20px 0px 0px 20px;
-  width: 42%;
+  width: 34%;
   height: 100%;
   object-fit: cover;
 }
 .container-popular {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 15px 5px 10px 0;
 }
 .text > p {
   font-size: 0.875em;
@@ -283,13 +294,14 @@ p {
 }
 .activity-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 1.18em;
+  column-gap: 2%;
 }
 .activity-card {
   background-color: white;
-  width: 18em;
-  height: 445px;
+  width: 22.2%;
+  height: 431px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -300,32 +312,49 @@ p {
   border-radius: 20px 20px 0 0;
 }
 .container-activity {
-  padding: 0.8em 0 0 1.5em;
+  display: flex;
+  height: 10%;
+  padding-left: 6.5%;
+  align-items: center;
 }
 
+#activity-title {
+  padding-left: 2.5%;
+}
 /* FOOTER  */
 
 footer {
   background-color: #f2f2f2;
   display: flex;
-  padding: 2.8em;
+  padding: 20px;
+  column-gap: 22%;
 }
 .footer {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  justify-content: space-around;
-}
-.footer > h2 {
-  margin-bottom: 1.2em;
-}
-.footer > a {
-  margin-bottom: 0.858em;
+  row-gap: 15px;
 }
 
 /* MEDIA QUERIES */
 
-@media (max-width: 991px) {
+@media screen and (max-width: 1440px) {
+  body {
+    margin: 0 50px 0 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  #filter {
+    margin-top: 10px;
+  }
+
+  .filter-button {
+    font-size: 1.063em;
+  }
+
   .rents {
     flex-direction: column;
   }
@@ -337,92 +366,93 @@ footer {
     justify-content: space-between;
   }
   .popular-card {
-    max-width: 15em;
-    column-gap: 11px;
+    width: 31.5%;
+  }
+  .popular-card > img {
+    width: 34.5%;
   }
   .text > p {
     font-size: 0.813em;
   }
+  #activity-title {
+    padding-left: 3.5%;
+  }
+  .activity-cards {
+    column-gap: 3%;
+  }
   .activity-card {
-    width: 11.375em;
-    height: 267px;
+    height: 270px;
+    width: 21%;
   }
   .activity-card > img {
-    height: 80%;
+    height: 74.08%;
   }
   .container-activity {
-    height: 20%;
-    display: flex;
-    padding: 0 0 5px 15px;
-    width: 86%;
-    align-items: center;
+    height: 22%;
   }
-  .footer {
-    justify-content: start;
+  footer {
+    column-gap: 16%;
   }
 }
 @media (max-width: 767px) {
   body {
-    margin: 20px;
+    margin: 30px 20px 0 20px;
   }
   header {
     flex-direction: column;
+    align-items: center;
   }
   #booki {
-    margin: 1px 0 48.56px 0;
+    margin: 0 0 14px 0;
   }
   nav {
-    width: 100vw;
+    margin-left: -20px;
+    margin-right: -20px;
   }
-  nav > ul > li > a {
-    padding: 0;
+  nav > ul {
+    gap: 0;
   }
-  nav > ul > li:hover {
-    border-top: solid 0em #0065fc;
+  nav > ul > a > li {
+    width: 50vw;
+    text-align: center;
+    border-bottom: solid 0.15em rgba(242, 242, 242, 1);
   }
-  nav > ul > li > a:hover .nav-bar1 {
-    position: absolute;
-    background-color: #0065fc;
-    height: 3px;
-    width: 55%;
-    transform: translateX(-35%);
-    margin-top: 23.09px;
+
+  nav > ul > a > li {
+    padding-bottom: 15px;
   }
-  nav > ul > li > a:hover .nav-bar2 {
-    position: absolute;
-    background-color: #0065fc;
-    height: 3px;
-    width: 54%;
-    transform: translateX(-35%);
-    margin-top: 23.09px;
-    overflow-x: hidden;
+  nav > ul > a > li:hover {
+    border-top: solid 0.15em #0065fc00;
+    border-bottom: solid 0.15em #0065fc;
+    transition: 0.2s;
   }
+  nav > ul > a:hover {
+    transition: 0.2s;
+  }
+
   ul {
     justify-content: space-around;
   }
-  .nav-bar {
-    width: 100%;
-    height: 3px;
-    background-color: #f2f2f2;
-    margin: 23.09px 0 31px 0;
+  .search {
+    margin-top: 30px;
   }
-
   .form-search {
     display: flex;
     height: 49px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 100vw;
+  }
+  .location-dot {
+    width: 49px;
   }
   .search-input {
-    width: 232px;
+    width: 237px;
     border-radius: 0px;
     padding-left: 15px;
     transform: translateX(0px);
   }
   .search-button {
-    width: 50px;
-    transform: translateX(0px);
+    width: 49px;
+    transform: translateX(-10px);
+    border-radius: 15px;
   }
   .search-icon {
     display: block;
@@ -435,20 +465,31 @@ footer {
     margin-top: 36px;
     margin-bottom: 34px;
   }
+
+  #filter {
+    margin-top: 0;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+
   .filter-button h2 {
     font-size: 0.688em;
   }
   .filter-button {
     height: 50px;
-    width: 160px;
-    font-size: 0.688em;
+    width: 48%;
+    font-size: 0.875em;
   }
   .filter-buttons {
-    column-gap: 0;
-    justify-content: space-between;
+    column-gap: 10px;
+    justify-content: center;
+    width: 100%;
   }
   .filter-button-icons {
     margin-right: 0.5em;
+    font-size: 1.4em;
   }
   .info-wrapper {
     font-size: 1em;
@@ -461,53 +502,61 @@ footer {
   footer {
     margin-left: -20px;
     margin-right: -20px;
-    padding: 45px 0 0 20px;
+    padding: 30px 0 0 20px;
     flex-direction: column;
+    row-gap: 40px;
   }
   .lodging {
     margin-bottom: 0;
     background-color: #ffffff;
     padding: 28px 20px 47px 20px;
   }
+  .lodging > h1 {
+    margin-bottom: 15px;
+  }
   .lodging-card {
-    max-width: 380px;
-    margin-bottom: 1em;
+    width: 100%;
   }
-  .lodging-cards {
-    justify-content: center;
-  }
+
   .most-popular {
     border-radius: 0;
-    padding: 28px 20px 47px 20px;
+    padding: 28px 20px 30px 20px;
   }
   .popular-card {
-    min-width: 100%;
-    column-gap: 14px;
+    width: 100%;
+    column-gap: 10px;
   }
   .popular-cards {
     row-gap: 1em;
   }
-  #view-more {
-    display: none;
+
+  .activity {
+    margin: 0 10px 65px 10px;
   }
+
+  #view-more {
+    margin-top: 1rem;
+  }
+
   .activity-cards {
     flex-direction: column;
     row-gap: 1em;
   }
   .activity-card {
-    height: 190px;
+    height: 200px;
     min-width: 100%;
   }
   .activity-card > img {
-    height: 70%;
+    height: 70.5%;
   }
-  .container-activity {
-    align-items: end;
-  }
+
   #activity-title {
-    width: 60%;
+    width: 82%;
+    padding-left: 0%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
   .footer {
-    margin-bottom: 40px;
+    margin: 0 10px 0 10px;
   }
 }

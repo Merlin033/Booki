@@ -26,20 +26,9 @@
       />
       <nav>
         <ul>
-          <li>
-            <a href="#"
-              >Hébergements
-              <div class="nav-bar1"></div
-            ></a>
-          </li>
-          <li>
-            <a href="#"
-              >Activités
-              <div class="nav-bar2"></div
-            ></a>
-          </li>
+          <a href="#hebergements"> <li>Hébergements</li></a
+          ><a href="#activites"> <li>Activités</li></a>
         </ul>
-        <div class="nav-bar"></div>
       </nav>
     </header>
     <main>
@@ -68,7 +57,9 @@
           </div>
         </form>
         <div class="filters">
-          <h2 id="filter">Filtres</h2>
+          <div class="filters__title">
+            <h2 id="filter">Filtres</h2>
+          </div>
           <div class="filter-buttons">
             <button class="filter-button">
               <span class="filter-button-icons">
@@ -90,9 +81,9 @@
             </button>
             <button class="filter-button">
               <span class="filter-button-icons">
-                <i class="fa-solid fa-dog"></i>
+                <i class="fa-solid fa-fire"></i>
               </span>
-              Animaux autorisés
+              Nos pépites
             </button>
           </div>
         </div>
@@ -109,7 +100,7 @@
           </div>
         </div>
       </section>
-      <section class="rents">
+      <section class="rents" id="hebergements">
         <div class="lodging">
           <h1>Hébergements à Marseille</h1>
           <div class="lodging-cards">
@@ -245,8 +236,8 @@
               />
               <div class="container-popular">
                 <div class="text">
-                  <h3>Hôtel Le soleil du matin</h3>
-                  <p>Nuit à partir de 128<strong>€</strong></p>
+                  <h3>Auberge la Canebière</h3>
+                  <p>Nuit à partir de 25<strong>€</strong></p>
                 </div>
 
                 <div class="rating-popular">
@@ -307,7 +298,7 @@
           </div>
         </div>
       </section>
-      <section class="activity">
+      <section class="activity" id="activites">
         <h1 id="activity-title">Activités à Marseille</h1>
         <div class="activity-cards">
           <article class="activity-card">
