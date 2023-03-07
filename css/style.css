@@ -32,10 +32,15 @@ nav > ul > a > li:hover {
   border-top: solid 0.15em #0065fc;
   transition: 0.2s;
 }
-a {
+nav > ul > a {
   font-size: 0.875em;
+}
+a {
   color: inherit;
   text-decoration: none;
+}
+.a-card {
+  width: 30%;
 }
 button:hover {
   cursor: pointer;
@@ -188,7 +193,7 @@ p {
 }
 .lodging-card {
   background-color: white;
-  width: 30%;
+  width: 100%;
   height: 207.25px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -247,6 +252,9 @@ p {
   align-items: center;
   margin-bottom: 1.5em;
 }
+.a-card-popular {
+  width: 100%;
+}
 .popular-card {
   display: flex;
   column-gap: 10px;
@@ -298,9 +306,12 @@ p {
   margin-top: 1.18em;
   column-gap: 2%;
 }
+.a-card-activity {
+  width: 22.2%;
+}
 .activity-card {
   background-color: white;
-  width: 22.2%;
+  width: 100%;
   height: 431px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -365,8 +376,11 @@ footer {
     flex-direction: row;
     justify-content: space-between;
   }
-  .popular-card {
+  .a-card-popular {
     width: 31.5%;
+  }
+  .popular-card {
+    width: 100%;
   }
   .popular-card > img {
     width: 34.5%;
@@ -380,9 +394,11 @@ footer {
   .activity-cards {
     column-gap: 3%;
   }
+  .a-card-activity {
+    width: 21%;
+  }
   .activity-card {
     height: 270px;
-    width: 21%;
   }
   .activity-card > img {
     height: 74.08%;
@@ -514,13 +530,16 @@ footer {
   .lodging > h1 {
     margin-bottom: 15px;
   }
-  .lodging-card {
+  .a-card {
     width: 100%;
   }
 
   .most-popular {
     border-radius: 0;
     padding: 28px 20px 30px 20px;
+  }
+  .a-card-popular {
+    width: 100%;
   }
   .popular-card {
     width: 100%;
@@ -542,9 +561,11 @@ footer {
     flex-direction: column;
     row-gap: 1em;
   }
+  .a-card-activity {
+    width: 100%;
+  }
   .activity-card {
     height: 200px;
-    min-width: 100%;
   }
   .activity-card > img {
     height: 70.5%;
