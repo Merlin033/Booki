@@ -283,7 +283,7 @@ p {
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: space-between;
-	row-gap: 10px;
+	row-gap: 25px;
 }
 .popular-card > img {
 	border: 5px solid #ffffff;
