@@ -18,31 +18,30 @@ header {
 	justify-content: space-between;
 	margin-left: -20px;
 	margin-right: -20px;
+	counter-increment: none;
 }
 
 nav > ul {
 	display: flex;
 	column-gap: 69px;
+	margin-top: 16px;
 }
-nav > ul > a > li {
+nav > ul > li > a {
 	padding-top: 14px;
 	font-size: 1rem;
-	border-top: solid 0.15em rgba(0, 0, 0, 0);
+	border-top: solid 2px rgba(0, 0, 0, 0);
 }
-nav > ul > a > li:hover {
+nav > ul > li > a:hover {
 	color: #0065fc;
-	border-top: solid 0.15em #0065fc;
+	border-top: solid 2px #0065fc;
 	transition: 0.2s;
 }
-nav > ul > a {
+nav > ul > li {
 	font-size: 0.875em;
 }
 a {
 	color: inherit;
 	text-decoration: none;
-}
-.a-card {
-	width: 30%;
 }
 button:hover {
 	cursor: pointer;
@@ -166,7 +165,8 @@ p {
 	justify-content: center;
 	align-items: center;
 	margin-right: 11px;
-	font-size: 0.8em;
+	padding: 10px;
+	font-size: 0.7em;
 	color: #0065fc;
 }
 
@@ -179,15 +179,15 @@ p {
 	font-size: 1.375em;
 }
 
-/* LODGING SECTION */
+/************************************** LODGING SECTION ***************************************/
 
 .lodging {
-	flex: 2.1;
+	width: 66%;
 	display: flex;
 	flex-direction: column;
 	background-color: #f2f2f2;
 	border-radius: 20px;
-	padding: 30px 0 30px 0;
+	padding: 30px 10px 30px 10px;
 }
 .lodging > h2 {
 	margin-bottom: 1em;
@@ -196,12 +196,14 @@ p {
 .lodging > a {
 	margin-top: 1em;
 }
+.a-card {
+	width: 30%;
+}
 .lodging-cards {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	row-gap: 1.5em;
-	align-items: flex-start;
 }
 .lodging-card {
 	background-color: white;
@@ -248,7 +250,7 @@ p {
 	padding-left: 2.5%;
 }
 
-/* MOST POPULAR SECTION */
+/*************************************** MOST POPULAR SECTION ***************************************/
 
 .most-popular {
 	display: flex;
@@ -256,7 +258,7 @@ p {
 	background-color: #f2f2f2;
 	border-radius: 20px;
 	padding: 30px;
-	flex: 1;
+	width: 33%;
 }
 .title-most-popular {
 	display: flex;
@@ -308,7 +310,7 @@ p {
 	color: #0065fc;
 	font-size: 1.2em;
 }
-/* ACTIVITIES SECTION */
+/*************************************** ACTIVITIES SECTION ***************************************/
 
 .activity {
 	display: flex;
@@ -367,7 +369,7 @@ footer {
 	row-gap: 15px;
 }
 
-/* MEDIA QUERIES */
+/*************************************** MEDIA QUERIES ***************************************/
 
 @media screen and (min-width: 1440px) {
 	header {
@@ -399,6 +401,10 @@ footer {
 	}
 	.lodging {
 		margin-bottom: 4em;
+		width: 100%;
+	}
+	.most-popular {
+		width: 100%;
 	}
 	.popular-cards {
 		flex-direction: row;
@@ -411,7 +417,7 @@ footer {
 		width: 100%;
 	}
 	.popular-card > img {
-		width: 36%;
+		width: 35%;
 	}
 	.container-popular {
 		width: 64%;
@@ -441,6 +447,9 @@ footer {
 		column-gap: 13%;
 	}
 }
+
+/*************************************** Mobile ***************************************/
+
 @media (max-width: 767px) {
 	body {
 		margin: 30px 20px 0 20px;
@@ -459,21 +468,24 @@ footer {
 	nav > ul {
 		gap: 0;
 	}
-	nav > ul > a > li {
+	nav > ul > li {
+		display: flex;
+	}
+	nav > ul > li > a {
 		width: 50vw;
 		text-align: center;
-		border-bottom: solid 0.15em rgba(242, 242, 242, 1);
+		border-bottom: solid 2px rgba(242, 242, 242, 1);
 	}
 
-	nav > ul > a > li {
+	nav > ul > li > a {
 		padding-bottom: 15px;
 	}
-	nav > ul > a > li:hover {
-		border-top: solid 0.15em #0065fc00;
-		border-bottom: solid 0.15em #0065fc;
+	nav > ul > li > a:hover {
+		border-top: solid 2px #0065fc00;
+		border-bottom: solid 2px #0065fc;
 		transition: 0.2s;
 	}
-	nav > ul > a:hover {
+	nav > ul > li:hover {
 		transition: 0.2s;
 	}
 
@@ -484,23 +496,28 @@ footer {
 		margin-top: 30px;
 	}
 	.form-search {
-		display: flex;
 		height: 49px;
-		width: 100%;
+		position: relative;
 	}
 	.location-dot {
-		width: 20%;
+		width: 49px;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 	.search-input {
 		width: 100%;
-		border-radius: 0px;
-		padding-left: 15px;
+		padding-left: 70px;
 		transform: translateX(0px);
 	}
 	.search-button {
-		width: 20%;
-		transform: translateX(-10px);
+		width: 49px;
+		transform: translateX(0px);
 		border-radius: 15px;
+		z-index: 2;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 	.search-icon {
 		display: block;
@@ -539,8 +556,8 @@ footer {
 		margin-right: 0.5em;
 		font-size: 1.4em;
 	}
-	.info-wrapper {
-		font-size: 1em;
+	.info-wrapper-container {
+		align-self: center;
 	}
 	.rents {
 		margin-left: -20px;
